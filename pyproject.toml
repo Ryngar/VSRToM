@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vsrtom"
+version = "0.1.0"
+description = "VSRToM dataset construction and default/DePeR evaluation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = []
+
+[project.optional-dependencies]
+data = ["pyarrow>=21", "Pillow>=10", "huggingface_hub>=0.34,<3", "datasets>=4,<6"]
+qwen = [
+    "torch>=2.5,<3",
+    "torchvision>=0.20,<1",
+    "transformers==4.51.3",
+    "accelerate>=0.29,<2",
+    "qwen-vl-utils==0.0.14",
+    "Pillow>=10,<12",
+]
+
+[tool.setuptools.packages.find]
+include = ["vsrtom*"]
+
+[tool.setuptools.package-data]
+vsrtom = ["prompts/*.json"]

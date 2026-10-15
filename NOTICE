@@ -1,0 +1,23 @@
+VSRToM code release
+Copyright VSRToM contributors.
+
+The task prompts, response parsing, Qwen2.5-VL adapter and DePeR flow are
+adapted from the VSRToM implementation built on lmms-eval:
+https://github.com/EvolvingLMMs-Lab/lmms-eval
+Copyright (c) 2025 LMMs-Lab.
+
+The original lmms-eval license notice is retained in
+third_party/lmms-eval-LICENSE. Its core harness uses MIT; its multimodal
+model/task contributions use Apache License 2.0. This standalone release
+uses Apache License 2.0 and does not vendor the full evaluation harness.
+
+Modifications for this release: standalone CLI, configurable resources,
+removal of private configuration and unrelated experimental methods,
+explicit input validation, separate round records, and tests. The dataset
+labeling/sampling functions and retained prompt strings come from the
+research implementation. See docs/REPRODUCIBILITY.md for scope.
+
+Qwen2.5-VL, Grounding DINO and Orient Anything are external dependencies.
+No third-party model weights, images, 3D assets, participant records or
+benchmark datasets are included. Their licenses are not replaced by the
+code license in this repository.
